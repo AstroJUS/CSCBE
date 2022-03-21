@@ -44,6 +44,32 @@ On convertit cet ensemble de nombre en hexadécimal ce qui nous donne
 43 53 43 42 45 7b 54 65 73 74 5f 4c 75 61 5f 4f 62 66 75 73 63 61 74 6f 72 7d
 et on convertit ces chiffre en ASCII et nous obtenons le flag
 
+## PikaPad
+
+J’ai d’abord installé un émulateur android, installé l’app et nous avons vu que l’app nous demandait un code à 6 chiffres.
+
+Nous avons d’abord cherché le “Main activity” de l’app et j'ai trouvé ce code.
+</br><img src="/img/11.png"></br>
+Nous avons analysé le code et trouve la connection comme suit :
+</br><img src="/img/12.png"></br>
+Nous rentrons donc le code : 274169 et l’app nous donne donc le flag
+
+## Hideout
+On ouvre le fichier pcap avec wireshark et on extrait les object http.
+</br><img src="/img/13.png"></br>
+On ignore le rick roll
+</br><img src="/img/13.5.png"></br>
+Et on save le fichier ci-dessous:
+</br><img src="/img/14.png"></br>
+Ce fichier contient un pastebin qui contient le flag
+</br><img src="/img/15.png"></br>
+
+## Over 9000
+
+Nous avons installé l'appli sur votre machine virtuelle, nous devons cliquer sur les sangoku pour obtenir + de 9000 points sauf que les points bloquent à 7612, nous essayons donc de modifier les valeurs grâce à “Game Guardian”
+
+C’etait bien ca la solution, nous avons modifié les values to 9001 et nous obtenons le flag
+
 
 
 
