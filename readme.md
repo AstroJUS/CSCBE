@@ -3,7 +3,7 @@
   <a href="https://github.com/AstroJUS/CSCBE">
     <img src="/img/CSCBE.png" height="200">
   </a>
-  <h1><a href="https://github.com/AstroJUS/CSCBE">CSCBE</a></h1>
+  <h1><a href="https://platform.cybersecuritychallenge.be/scoreboard">CSCBE</a></h1>
 <!-- Labels: -->
   <!-- First row: -->
  <!--  <a href="https://www.paypal.me/TheAlgorithms/100">
