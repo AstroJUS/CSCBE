@@ -14,5 +14,11 @@
 QUALIFIED - 18th </br> Our solution
 ## ROTERDAM
 
-<img src="/img/1.png" height="200">
+<img src="/img/1.png" height="200"></br>
+Connaissant l’erreur 400 et son message, on détermine un décalage de césar de 13.
+On obtient:
+<img src="/img/2.png" height="200"></br>
+On peut donc utiliser burpSuite pour envoyer nos requêtes HTTP codées en rot 13.
+Cette requête qu’on envoie :
+<img src="/img/3.png" height="200"></br>
 
