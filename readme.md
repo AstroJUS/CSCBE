@@ -70,10 +70,76 @@ Nous avons installé l'appli sur votre machine virtuelle, nous devons cliquer su
 
 C’etait bien ca la solution, nous avons modifié les values to 9001 et nous obtenons le flag
 
+## headers masters
 
+Pour réussir ce challenge nous devions modifier les http header, voici les header que nous avons utilisé
+referer: reddit.com
+X-Forwarded-For: 10.13.37.0
+Authorization: Basic YWRtaW46YWRtaW4=
+Date: Wed, 21 Oct 1900 07:28:00 GMT
+nous avons également utilisé user-agent switcher avec l’user agent :Mozilla/5.0 (CrKey armv7l 1.5.16041) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.0 Safari/537.36 et nous recevons donc le flag
 
+## Unstable Serial Killer
 
+C’est un fichier logic 2
+Faut analyser les fréquences, le flag était dedans en ASCII, un peu facile, il fallait juste savoir qu’un fichier .sal était utilisé par logic 2
 
+## Telemaze
+
+Il faut coder une appli qui communique avec le netcat et qui résout le labyrinthe.
+Exemple d’un essai qui a fonctionné :
+</br><img src="/img/16.png"></br>
+La réponse était “UURDRURRRDLDRRRDLLLDU”
+</br><img src="/img/17.png"></br>
+Aperçu du code
+</br><img src="/img/18.png"></br>
+
+## Complex encoding
+
+Grâce au module codext on trouve que le texte de base est de la base 62 ce qui donne :
+begin 666 <data>
+M'XL( /H^)V("__-)SBB-<O7*+#;,K8PL\/ H\C#UR2LP= H)C0@-RZ\*"P@M
+M\"T-\*@(#\]V\<A,*R^W\"@I,W9Q-,LU\8XR=$XM*TYR3PG,2G)+RO P#_'.
+?"LRJS#)US0X(KPJH<$U.J@P(<TGR  #3A(K<90
+
+end
+
+On convertit ce résultat en fichier binaire grâce à http://uuencode.online-domain-tools.com/
+
+On l’ouvre en .zip et on obtient un fichier texte qui contient “LchuZEJis1myYpHHrH5Lnp1BTUXUVozVPUpMuPHxWWkDHifww8Htv3DA6m4KZ1CevsbGdQjbFbhH7TKjQjyj5EkPWzPxEcbyPVDbH”
+C’est de la base58 qui donne “D712273346274386F54713F53733B643D6F53727339743C6F533C6071347C657D6B7343534 	
+”.
+Ce qui mène vers une impasse, mais un programme à été capable de crack ce dernier cipher, c’est “Ciphey”.
+
+</br><img src="/img/19.png"></br>
+
+Ce qui donne le flag après plusieurs cycles.
+Key or Pin ?
+On upload le fichier sur [CyberChef](https://gchq.github.io/CyberChef/)
+</br><img src="/img/20.png"></br>
+On choisit le “Xor bruteforce” en mettant qu’on connaît la chaîne “csc”.
+
+## Vault
+
+Nous recevons un fichier “vault” en l’ouvrant, nous trouver une string “upx” donc je suppose que le fichier est crypté avec un upx packer, avec ce tool : https://github.com/upx/upx
+
+Avec la commande upx -d vault, notre fichier est décrypte, ensuite je constate que le fichier est un fichier “ELF” qui est un fichier source, je l’ouvre avec IDA, j’ai essayé avec x64dbg au debut mais ca fonctionnait pas, avec IDA je trouve la fonction main_main et c’est là que tout se passe, voici qque screen. 
+
+</br><img src="/img/21.png"></br>
+
+Et en fait, le mot de passe github et discord étaient des phrases “troll” en base 64, alors que les encadrés en rouge, étaient le flag, il fallait xor chaque phrase avec la clé qui était “C” et ca nous donnait le flag. 
+
+## Near future
+
+Nous avons un fichier challenge.exe, nous le decompilon avec instxractor : https://github.com/extremecoders-re/pyinstxtractor
+pour obtenir des fichiers, nous trouvons challenge.pyc qui est un fichier python compile, nous utilisons donc un decompiler, decompyle3 :
+https://pypi.org/project/decompyle3/
+Ce qui nous donne donc le code python en clair.
+Voici le code python non modifié. 
+
+</br><img src="/img/22.png"></br>
+Et la date, en hash, était la date du 2077-10-12 (référence a cyberpunk je suppose ?)
+Nous modifions donc le code comme suit, et le code nous donne le flag
 
 
 
