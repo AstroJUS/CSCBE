@@ -31,7 +31,19 @@ On répond “10”, on chiffre la requête POST toujours en césar, et finaleme
 </br><img src="/img/7.png"></br>
 
 ## REVERSE ME 101
+
 </br><img src="/img/8.png"></br>
+</br><img src="/img/9.png"></br>
+</br><img src="/img/10.png"></br>
+
+## REVERSE ME LUATIC
+
+String du file, on obtient un long calcul qu’on exécute sur pycharm et il nous sort un ensemble de chiffre :
+(67, 83, 67, 66, 69, 123, 84, 101, 115, 116, 95, 76, 117, 97, 95, 79, 98, 102, 117, 115, 99, 97, 116, 111, 114, 125)
+On convertit cet ensemble de nombre en hexadécimal ce qui nous donne
+43 53 43 42 45 7b 54 65 73 74 5f 4c 75 61 5f 4f 62 66 75 73 63 61 74 6f 72 7d
+et on convertit ces chiffre en ASCII et nous obtenons le flag
+
 
 
 
