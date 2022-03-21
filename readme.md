@@ -14,5 +14,5 @@
 QUALIFIED - 18th </br> Our solution
 ## ROTERDAM
 
-[Altext](img/1.png)
+[Altext](/img/1.png)
 
