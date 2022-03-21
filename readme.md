@@ -30,6 +30,11 @@ On la déchiffre pour que le navigateur la comprenne et on obtient ce formulaire
 On répond “10”, on chiffre la requête POST toujours en césar, et finalement le serveur nous répond avec cette requête déchiffrée:
 </br><img src="/img/7.png"></br>
 
+## REVERSE ME 101
+</br><img src="/img/8.png"></br>
+
+
+
 
 
 
