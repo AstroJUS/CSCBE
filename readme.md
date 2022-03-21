@@ -1,7 +1,7 @@
 <div align="center">
 <!-- Title: -->
   <a href="https://github.com/AstroJUS/CSCBE">
-    <img src="https://cdn.discordapp.com/attachments/941313752324796456/955408066868805642/CSCBE.png" height="200">
+    <img src="img/CSCBE.png" height="200">
   </a>
   <h1><a href="https://github.com/AstroJUS/CSCBE">CSCBE</a></h1>
 <!-- Labels: -->
