@@ -11,7 +11,7 @@
   </a>-->
 </div>
 
-QUALIFIED - 18th </br> Our solution
+</br> Our solution
 ## ROTERDAM
 
 </br><img src="/img/1.png"></br>
